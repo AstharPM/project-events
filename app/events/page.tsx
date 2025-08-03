@@ -21,7 +21,7 @@ export default function EventsPage() {
   const [selectedTier, setSelectedTier] = useState<string>('all');
   const [upgradeModalOpen, setUpgradeModalOpen] = useState(false);
 
-  const userTier = (user?.publicMetadata?.tier as UserTier) || 'free';
+  const userTier = (user?.unsafeMetadata?.tier as UserTier) || 'free';
   const accessibleTiers = getAccessibleTiers(userTier);
 
   useEffect(() => {

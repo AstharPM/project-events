@@ -20,8 +20,8 @@ export default function DebugPage() {
         isLoaded,
         isSignedIn: user ? true : false,
         email: user?.emailAddresses?.[0]?.emailAddress,
-        publicMetadata: user?.publicMetadata,
-        tier: user?.publicMetadata?.tier
+            unsafeMetadata: user?.unsafeMetadata,
+    tier: user?.unsafeMetadata?.tier
       };
 
       // 2. Test Supabase connection

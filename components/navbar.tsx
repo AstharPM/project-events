@@ -7,7 +7,7 @@ import { tierColors, tierGradients, UserTier } from '@/lib/tier-utils';
 
 export default function Navbar() {
   const { user } = useUser();
-  const userTier = (user?.publicMetadata?.tier as UserTier) || 'free';
+  const userTier = (user?.unsafeMetadata?.tier as UserTier) || 'free';
 
   return (
     <nav className="bg-white shadow-sm border-b">

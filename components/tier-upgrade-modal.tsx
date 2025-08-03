@@ -42,8 +42,8 @@ export default function TierUpgradeModal({ isOpen, onClose, currentTier }: TierU
       
       // Update user metadata
       await user.update({
-        publicMetadata: {
-          ...user.publicMetadata,
+        unsafeMetadata: {
+          ...user.unsafeMetadata,
           tier: newTier,
         },
       });
